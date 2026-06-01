@@ -1,0 +1,333 @@
+<mvc:View
+    controllerName="bidmatrix.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f">
+
+    <Page id="_IDGenPage1"
+        showHeader="false"
+        class="sapUiContentPadding">
+
+        <content>
+
+            <!-- Main Container -->
+            <VBox id="_IDGenVBox" class="sapUiLargeMargin">
+
+                <!-- Header Card -->
+                <f:Card id="_IDGenCard" class="sapUiMediumMarginBottom">
+
+                    <f:content>
+
+                        <VBox id="_IDGenVBox1" class="sapUiLargeMargin">
+
+                            <!-- Logo + Title -->
+                            <HBox id="_IDGenHBox"
+                                alignItems="Center"
+                                class="sapUiMediumMarginBottom">
+
+                                <!-- Motherson Logo -->
+                                <Image id="_IDGenImage"
+                                    src="/img/motherson_logo.png"
+                                    width="220px"
+                                    densityAware="false"
+                                    class="sapUiMediumMarginEnd"/>
+
+                                <!-- Vertical Separator -->
+                                <VBox id="_IDGenVBox2" class="sapUiTinyMarginEnd">
+                                    <core:Icon id="_IDGenIcon"
+                                        src="sap-icon://vertical-bar"
+                                        size="1.5rem"
+                                        color="#C5C5C5"/>
+                                </VBox>
+
+                                <!-- Page Title -->
+                                <Title id="_IDGenTitle"
+                                    text="BID Matrix Comparison"
+                                    level="H1"/>
+                            </HBox>
+
+                            <!-- Description -->
+                            <Text id="_IDGenText"
+                                text="Enter a bid event ID to load the comparison template and analyze bidder responses."
+                                class="sapUiMediumMarginBottom"/>
+
+                            <!-- Input Section -->
+                            <HBox id="_IDGenHBox1" alignItems="Center">
+
+                                <Label id="_IDGenLabel"
+                                    text="* Bid Event ID:"
+                                    width="140px"
+                                    design="Bold"/>
+
+                                <Input id="_IDGenInput"
+                                    width="500px"
+                                    placeholder="Enter Bid Event ID (e.g. EV123456)">
+                                    <layoutData>
+                                        <FlexItemData id="_IDGenFlexItemData" growFactor="1"/>
+                                    </layoutData>
+                                </Input>
+
+                                <Button id="_IDGenButton"
+                                    icon="sap-icon://copy"
+                                    type="Transparent"
+                                    class="sapUiTinyMarginBegin"/>
+
+                            </HBox>
+
+                        </VBox>
+
+                    </f:content>
+
+                </f:Card>
+
+                <!-- Actions Section -->
+                <f:Card id="_IDGenCard1" class="sapUiMediumMarginBottom">
+
+                    <f:content>
+
+                        <VBox id="_IDGenVBox3" class="sapUiLargeMargin">
+
+                            <Title id="_IDGenTitle1"
+                                text="Actions"
+                                level="H3"
+                                class="sapUiSmallMarginBottom"/>
+
+                            <HBox id="_IDGenHBox2"
+                                justifyContent="Start"
+                                renderType="Bare">
+
+                                <!-- Load Template -->
+                                <Button id="_IDGenButton1"
+                                    text="Load Template"
+                                    press="onLoadTemplate"
+                                    icon="sap-icon://document-text"
+                                    type="Emphasized"
+                                    width="260px"
+                                    class="sapUiTinyMarginEnd"/>
+
+                                <!-- Download -->
+                                <Button id="_IDGenButton2"
+                                    text="Download"
+                                    icon="sap-icon://download"
+                                    width="260px"
+                                    class="sapUiTinyMarginEnd"/>
+
+                                <!-- DocuSign -->
+                                <Button id="_IDGenButton3"
+                                    text="DocuSign"
+                                    icon="sap-icon://signature"
+                                    width="260px"
+                                    class="sapUiTinyMarginEnd"/>
+
+                                <!-- Check Status -->
+                                <Button id="_IDGenButton4"
+                                    text="Check Status"
+                                    icon="sap-icon://synchronize"
+                                    width="260px"/>
+
+                            </HBox>
+
+                        </VBox>
+
+                    </f:content>
+
+                </f:Card>
+
+                <!-- How It Works -->
+                <f:Card id="_IDGenCard2"
+                visible="{= !${/showTable} }"
+                 class="sapUiMediumMarginBottom">
+
+                    <f:content>
+
+                        <VBox id="_IDGenVBox4" class="sapUiLargeMargin">
+
+                            <Title id="_IDGenTitle2"
+                                text="How it works"
+                                level="H3"
+                                class="sapUiMediumMarginBottom"/>
+
+                            <HBox id="_IDGenHBox3"
+                                justifyContent="SpaceAround"
+                                alignItems="Start">
+
+                                <!-- Step 1 -->
+                                <VBox id="_IDGenVBox5"
+                                    alignItems="Center"
+                                    width="22%">
+
+                                    <Avatar id="_IDGenAvatar"
+                                        displaySize="L"
+                                        initials="1"
+                                        backgroundColor="Accent6"
+                                        class="sapUiSmallMarginBottom"/>
+
+                                    <Title id="_IDGenTitle3"
+                                        text="Enter Bid Event ID"
+                                        level="H5"/>
+
+                                    <Text id="_IDGenText1"
+                                        text="Provide the Bid Event ID to get started."
+                                        textAlign="Center"/>
+
+                                </VBox>
+
+                                <!-- Step 2 -->
+                                <VBox id="_IDGenVBox6"
+                                    alignItems="Center"
+                                    width="22%">
+
+                                    <Avatar id="_IDGenAvatar1"
+                                        displaySize="L"
+                                        initials="2"
+                                        backgroundColor="Accent6"
+                                        class="sapUiSmallMarginBottom"/>
+
+                                    <Title id="_IDGenTitle4"
+                                        text="Load Template"
+                                        level="H5"/>
+
+                                    <Text id="_IDGenText2"
+                                        text="Load the comparison template for the event."
+                                        textAlign="Center"/>
+
+                                </VBox>
+
+                                <!-- Step 3 -->
+                                <VBox id="_IDGenVBox7"
+                                    alignItems="Center"
+                                    width="22%">
+
+                                    <Avatar id="_IDGenAvatar2"
+                                        displaySize="L"
+                                        initials="3"
+                                        backgroundColor="Accent6"
+                                        class="sapUiSmallMarginBottom"/>
+
+                                    <Title id="_IDGenTitle5"
+                                        text="Compare &amp; Review"
+                                        level="H5"/>
+
+                                    <Text id="_IDGenText3"
+                                        text="Review and compare bidder responses."
+                                        textAlign="Center"/>
+
+                                </VBox>
+
+                                <!-- Step 4 -->
+                                <VBox id="_IDGenVBox8"
+                                    alignItems="Center"
+                                    width="22%">
+
+                                    <Avatar id="_IDGenAvatar3"
+                                        displaySize="L"
+                                        initials="4"
+                                        backgroundColor="Accent6"
+                                        class="sapUiSmallMarginBottom"/>
+
+                                    <Title id="_IDGenTitle6"
+                                        text="Take Action"
+                                        level="H5"/>
+
+                                    <Text id="_IDGenText4"
+                                        text="Download, send for signature or check status."
+                                        textAlign="Center"/>
+
+                                </VBox>
+
+                            </HBox>
+
+                        </VBox>
+
+                    </f:content>
+
+                </f:Card>
+                
+                <f:Card id="_IDGenCard33"
+                    visible="{/showTable}"
+                    class="sapUiMediumMarginBottom">
+
+                    <f:content>
+
+                        <VBox class="sapUiLargeMargin">
+
+                            <Title
+                                text="Student Details"
+                                level="H3"
+                                class="sapUiSmallMarginBottom"/>
+
+                            <Table
+                                inset="false"
+                                items="{/students}">
+
+                                <!-- Columns -->
+                                <columns>
+
+                                    <Column>
+                                        <Text text="Student ID"/>
+                                    </Column>
+
+                                    <Column>
+                                        <Text text="Name"/>
+                                    </Column>
+
+                                    <Column>
+                                        <Text text="Department"/>
+                                    </Column>
+
+                                    <Column>
+                                        <Text text="Email"/>
+                                    </Column>
+
+                                    <Column>
+                                        <Text text="City"/>
+                                    </Column>
+
+                                </columns>
+
+                                <!-- Rows -->
+                                <items>
+
+                                    <ColumnListItem>
+
+                                        <cells>
+
+                                            <Text text="{studentId}"/>
+
+                                            <Text text="{name}"/>
+
+                                            <Text text="{department}"/>
+
+                                            <Text text="{email}"/>
+
+                                            <Text text="{city}"/>
+
+                                        </cells>
+
+                                    </ColumnListItem>
+
+                                </items>
+
+                            </Table>
+
+                        </VBox>
+
+                    </f:content>
+
+                </f:Card>
+
+                <!-- Information Strip -->
+                <MessageStrip id="_IDGenMessageStrip"
+                    text="Ensure you have the necessary permissions to access and compare bid data."
+                    type="Information"
+                    showIcon="true"
+                    showCloseButton="false"/>
+
+            </VBox>
+
+        </content>
+
+    </Page>
+
+</mvc:View>
