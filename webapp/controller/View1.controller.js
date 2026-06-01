@@ -69,7 +69,3 @@ sap.ui.define([
 
     });
 });
-
-
-
-/// Test
